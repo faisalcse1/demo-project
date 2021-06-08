@@ -1,0 +1,80 @@
+﻿@model EmailClient.Models.MailMessage
+
+@{
+    ViewData["Title"] = "Send";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<h1>Send</h1>
+
+<h4>MailMessage</h4>
+@if (ViewBag.Mgs != null)
+{
+    <h4>@ViewBag.Mgs</h4>
+}
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Send" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="To" class="control-label"></label>
+                <select asp-for="To" class="form-control" multiple="multiple"></select>
+                <span asp-validation-for="To" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cc" class="control-label"></label>
+                <select asp-for="Cc" class="form-control" multiple="multiple"></select>
+                <span asp-validation-for="Cc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bcc" class="control-label"></label>
+                <select asp-for="Bcc" class="form-control" multiple="multiple"></select>
+                <span asp-validation-for="Bcc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subject" class="control-label"></label>
+                <input asp-for="Subject" class="form-control" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Body" class="control-label"></label>
+                <textarea asp-for="Body" class="form-control"></textarea>
+                <span asp-validation-for="Body" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="File" class="control-label"></label>
+                <input type="file" asp-for="File" class="form-control" />
+                <span asp-validation-for="File" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Send" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#Body').summernote({
+            height: 250
+        });
+        $('#To').select2({
+            tags:true
+        });
+        $('#Cc').select2({
+            tags: true
+        });
+        $('#Bcc').select2({
+            tags: true
+        });
+    });
+</script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
