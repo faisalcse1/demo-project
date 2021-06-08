@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreRepoApp", "CoreRepoApp\CoreRepoApp.csproj", "{ECF93D5B-DD15-478B-ACE0-06C235AF6970}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECF93D5B-DD15-478B-ACE0-06C235AF6970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF93D5B-DD15-478B-ACE0-06C235AF6970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF93D5B-DD15-478B-ACE0-06C235AF6970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF93D5B-DD15-478B-ACE0-06C235AF6970}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E119A234-863F-43F9-88AE-A25DEEC74001}
+	EndGlobalSection
+EndGlobal

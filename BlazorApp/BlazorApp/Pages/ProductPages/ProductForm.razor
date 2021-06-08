@@ -1,0 +1,30 @@
+﻿<EditForm Model="@product" OnValidSubmit="@OnValidSubmit">
+    <DataAnnotationsValidator />
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label>Name</label>
+                <InputText class="form-control" @bind-Value="@product.Name"></InputText>
+                <ValidationMessage For="@(()=>product.Name)" />
+
+            </div>
+            <div class="form-group">
+                <label>Type</label>
+                <InputText class="form-control" @bind-Value="@product.Type"></InputText>
+                <ValidationMessage For="@(()=>product.Name)" />
+            </div>
+
+            <button class="btn btn-info" type="submit">@ButtonText</button>
+        </div>
+    </div>
+
+</EditForm>
+
+@code {
+    [Parameter]
+    public Product product { get; set; }
+    [Parameter]
+    public string ButtonText { get; set; }
+    [Parameter]
+    public EventCallback OnValidSubmit { get; set; }
+}

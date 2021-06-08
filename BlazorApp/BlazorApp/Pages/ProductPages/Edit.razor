@@ -1,0 +1,33 @@
+﻿@page "/ProductPages/Edit/{Id:int}"
+@using BlazorApp.Gateway
+@using MatBlazor
+@inject NavigationManager navigation
+<h3>Add</h3>
+<h5>@message</h5>
+<ProductForm product="product" ButtonText="Edit" OnValidSubmit="@EditProdcut"></ProductForm>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    string message = null;
+    Product product = new Product();
+    ProductGateway gateway = new ProductGateway();
+
+    string value;
+
+    protected override void OnInitialized()
+    {
+        product = gateway.GetById(Id);
+    }
+
+    void EditProdcut()
+    {
+        bool isSaved = gateway.Update(product);
+        if (isSaved)
+        {
+            product = new Product();
+            navigation.NavigateTo("ProductPages/ProductList");
+        }
+
+    }
+}

@@ -1,0 +1,48 @@
+﻿@page "/ProductPages/Add"
+@using BlazorApp.Gateway
+@inject HttpClient  http
+<h3>Add</h3>
+<h5>@message</h5>
+<EditForm Model="@product" OnValidSubmit="AddProdcut">
+    <DataAnnotationsValidator />
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label>Name</label>
+                <InputText class="form-control" @bind-Value="@product.Name"></InputText>
+                <ValidationMessage For="@(()=>product.Name)" />
+
+            </div>
+            <div class="form-group">
+                <label>Type</label>
+                <InputText class="form-control" @bind-Value="@product.Type"></InputText>
+                <ValidationMessage For="@(()=>product.Name)" />
+            </div>
+
+            <button class="btn btn-info" type="submit">Save</button>
+        </div>
+    </div>
+
+</EditForm>
+
+@code {
+    string message = null;
+    Product product = new Product();
+    ProductGateway gateway = new ProductGateway();
+
+    string value;
+
+
+    async Task AddProdcut()
+    {
+
+        var data = await http.PostJsonAsync<Product>("https://localhost:44309/api/Product/Add", product);
+        bool isSaved = gateway.Add(product);
+        if (isSaved)
+        {
+            product = new Product();
+            message = "Saved data successfully";
+        }
+
+    }
+}

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<WebApiDemo.Models.Product>
+@{
+    ViewBag.Title = "Index";
+    int slNo = 1;
+}
+
+<h2>Product List</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>SL</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var product in Model)
+    {
+         
+        <tr>
+            <td>@(slNo++)</td>
+            <td>@product.Name</td>
+            <td>@product.Type</td>
+            <td>
+                <a href="@Url.Action("Edit","Setup",new{@area="Admin",@id=@product.Id})">Edit</a>
+                <a href="#" onclick="ShowModal(@product.Id)">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Confirm</h4>
+            </div>
+            <div class="modal-body">
+                <h5>Do you want to delete this product?</h5>
+            </div>
+            <div class="modal-footer">
+                <form action="@Url.Action("Delete", "Setup")" method="post">
+                    <input type="hidden" id="productId" name="productId" />
+                    <button type="submit" class="btn btn-success">Delete</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </form>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+        function ShowModal(id) {
+
+            $("#productId").val(id);
+            $("#myModal").modal("show");
+            //$("#productId").val(id);
+        }
+    </script>
+}
