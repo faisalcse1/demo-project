@@ -43,9 +43,9 @@
                 <span asp-validation-for="Body" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="File" class="control-label"></label>
-                <input type="file" asp-for="File" class="form-control" />
-                <span asp-validation-for="File" class="text-danger"></span>
+                <label asp-for="Files" class="control-label"></label>
+                <input type="file" multiple="multiple" asp-for="Files" class="form-control" />
+                <span asp-validation-for="Files" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Send" class="btn btn-primary" />

@@ -25,17 +25,21 @@ namespace EmailClient.Controllers
                 List<string>toMailAddress=new List<string>();
                 List<string> ccMailAddress = new List<string>();
                 List<string> bccMailAddress = new List<string>();
-                Email email = new Email("",25,false);
+                Email email = new Email();
                 toMailAddress = GetValidMail(mailMessage.To);
                 ccMailAddress = GetValidMail(mailMessage.Cc);
                 bccMailAddress = GetValidMail(mailMessage.Bcc);
                 string mgs = "Email send failed.";
 
                 List<Attachment>attachments=new List<Attachment>();
-                if(mailMessage.File!=null)
+                if(mailMessage.Files!=null)
                 {
-                    Attachment attachment=new Attachment(mailMessage.File.OpenReadStream(),mailMessage.File.FileName);
-                    attachments.Add(attachment);
+                    foreach (var file in mailMessage.Files)
+                    {
+                        Attachment attachment = new Attachment(file.OpenReadStream(), file.FileName);
+                        attachments.Add(attachment);
+                    }
+                    
                 }
                 
                 bool isSend = email.SendEmail(toMailAddress, Credential.Email, Credential.Password, mailMessage.Subject,

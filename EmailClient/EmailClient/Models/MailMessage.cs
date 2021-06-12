@@ -13,6 +13,6 @@ namespace EmailClient.Models
         public List<string> Bcc { get; set; }
         public string Subject { get; set; }
         public string Body { get; set; }
-        public IFormFile File { get; set; }
+        public List<IFormFile> Files { get; set; }
     }
 }

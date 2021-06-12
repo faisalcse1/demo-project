@@ -7,7 +7,7 @@ namespace EmailClient.Models
 {
     public static class Credential
     {
-        public static string Email = "type your mail";
-        public static string Password = "type password";
+        public static string Email = "Type email";
+        public static string Password = "Type password";
     }
 }
