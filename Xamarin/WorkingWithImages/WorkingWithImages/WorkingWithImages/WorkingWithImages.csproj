@@ -11,16 +11,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Plugin.Toast" Version="2.2.0" />
+    <None Remove="Images\MD-FAISAL.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\MD-FAISAL.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="HomePage.xaml">
+    <EmbeddedResource Update="DisplaySingleImage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="LoginPage.xaml">
+    <EmbeddedResource Update="EmbedderImage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

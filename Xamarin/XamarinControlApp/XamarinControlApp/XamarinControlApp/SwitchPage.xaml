@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinControlApp.SwitchPage">
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Label Text="Welcome to Xamarin Switch Page!"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                   FontSize="25"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Public Email"
+                    Grid.Row="0"
+                       Grid.Column="0"
+                       FontSize="Large"/>
+
+                <Switch Grid.Row="0" Grid.Column="1"
+                    x:Name="Switch"
+                   IsToggled="False"
+                    OnColor="Orange"
+                    ThumbColor="Green"
+                    Toggled="Switch_Toggled"/>
+            </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Are you agree?"
+                    Grid.Row="0"
+                       Grid.Column="0"
+                       FontSize="Large"/>
+
+                <CheckBox Grid.Row="0"
+                          Grid.Column="1"
+                          x:Name="CheckBox"
+                          CheckedChanged="CheckBox_CheckedChanged"/>
+            </Grid>
+
+            <Label Text="Programming Language"
+                   FontSize="Large"/>
+            <RadioButton x:Name="RadioBtnCsharp" Content="C#" Value="C#" IsChecked="True" GroupName="ProgramminRadioBtn"/>
+            <RadioButton x:Name="RadioBtnJava" Content="Java" Value="Java" GroupName="ProgramminRadioBtn"/>
+            <StackLayout>
+                <RadioButton x:Name="RadioBtnPaython" Content="Paython" Value="Paython" GroupName="ProgramminRadioBtn"/>
+            </StackLayout>
+
+
+            <Button Text="Show"
+                    x:Name="BtnShow"
+                    CornerRadius="15"
+                    BackgroundColor="SkyBlue"
+                    TextColor="White"
+                    Clicked="BtnShow_Clicked"/>
+
+           
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

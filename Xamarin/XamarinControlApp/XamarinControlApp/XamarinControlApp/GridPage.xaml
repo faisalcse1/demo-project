@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinControlApp.GridPage">
+    <ContentPage.Content>
+        <Grid RowSpacing="5"
+              ColumnSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="*"/>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="100" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0"
+                        Text="Row 0, Col 0"/>
+            <Button Grid.Row="0" Grid.Column="1"
+                        Text="Row 0, Col 1"/>
+            <Button Grid.Row="1" Grid.Column="0"
+                        Text="Row 1, Col 0"/>
+            <Button Grid.Row="1" Grid.Column="1"
+                        Text="Row 1, Col 1"/>
+
+            <Button Grid.Row="2" Grid.Column="0"
+                        Text="Row 2, Col 0"/>
+            <Button Grid.Row="2" Grid.Column="1"
+                        Text="Row 2, Col 1"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

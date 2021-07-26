@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinControlApp"
+             x:Class="XamarinControlApp.DatePickerPage">
+        <StackLayout Padding="10">
+            <Label Text="Date Picker"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                   FontSize="20"/>
+            <DatePicker x:Name="datePicker"
+                        MinimumDate="2019/01/01"
+                        MaximumDate="2023/01/01"/>
+            <TimePicker x:Name="timePicker" />
+            <Button Text="Show"
+                    x:Name="btnShow"
+                    BackgroundColor="SkyBlue"
+                    TextColor="White"
+                    Clicked="btnShow_Clicked"/>
+            <Label x:Name="lblResult"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            
+
+        </StackLayout>
+</ContentPage>

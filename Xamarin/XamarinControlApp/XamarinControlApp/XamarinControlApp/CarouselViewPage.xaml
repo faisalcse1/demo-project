@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinControlApp.CarouselViewPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <CarouselView x:Name="Carousel" IndicatorView="IndicatorView"
+                          HeightRequest="200">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding Url}" Aspect="AspectFill"/>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <IndicatorView x:Name="IndicatorView"
+                IndicatorColor="Gray"
+                SelectedIndicatorColor="DarkGray"
+                IndicatorSize="10"
+                           VerticalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

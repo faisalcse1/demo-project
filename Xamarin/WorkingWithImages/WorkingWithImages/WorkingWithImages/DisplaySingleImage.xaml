@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkingWithImages.DisplaySingleImage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Image"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                   FontSize="Large"/>
+            <Image x:Name="imgUser" 
+                   HeightRequest="400"
+                   WidthRequest="400"
+                   Aspect="Fill"/>
+            <Button Text="Back"
+                    BackgroundColor="SkyBlue"
+                    WidthRequest="100"
+                    HorizontalOptions="End"
+                    x:Name="btnBack"
+                    Clicked="btnBack_Clicked"
+                    />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

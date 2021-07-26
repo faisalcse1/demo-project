@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinControlApp.PickerPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Picker"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                   FontSize="Large"/>
+
+            <Picker Title="---Select---"
+                    x:Name="pickerCountry"
+                    ItemDisplayBinding="{Binding Name}"
+                    SelectedIndexChanged="pickerCountry_SelectedIndexChanged">
+                <!--<Picker.Items>
+                    <x:String>Bangladesh</x:String>
+                    <x:String>USA</x:String>
+                    <x:String>UK</x:String>
+                </Picker.Items>-->
+            </Picker>
+
+            <Button Text="Show"
+                    CornerRadius="15"
+                    x:Name="btnShow"
+                    BackgroundColor="SkyBlue"
+                    TextColor="White"
+                    Clicked="btnShow_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

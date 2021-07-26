@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WorkingWithImages"
+             x:Class="WorkingWithImages.EmbedderImage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Embedded image display"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                   FontSize="Large"/>
+            
+
+            <Frame Padding="0"
+                   HeightRequest="200"
+                   WidthRequest="200"
+                   BackgroundColor="White"
+                   CornerRadius="100"
+                   BorderColor="Teal"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   IsClippedToBounds="True"
+                   >
+                <Frame.Content>
+                    <Image x:Name="imgUser" Source="{local:ImageResource  WorkingWithImages.Images.MD-FAISAL.jpg}"
+                            Aspect="Fill">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                x:Name="displayFullImage"
+                                Tapped="displayFullImage_Tapped">
+                                
+                            </TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Frame.Content>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

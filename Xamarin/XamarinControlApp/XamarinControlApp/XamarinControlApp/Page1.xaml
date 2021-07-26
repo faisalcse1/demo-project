@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinControlApp.Page1"
+             
+             xmlns:imgCircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="User Image" VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="Large"/>
+            
+
+
+            <!--<Frame Padding="0"
+                   HeightRequest="180" 
+                   WidthRequest="180" HasShadow="False" 
+                   BackgroundColor="White"                   
+                   CornerRadius="100" 
+                   BorderColor="Teal" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+    IsClippedToBounds="True">
+                <Frame.Content>
+                    <Image Source="https://faisalcse1.gitlab.io/home/assets/img/MD-FAISAL.jpg" 
+                           
+                           Aspect="Fill"/>
+                </Frame.Content>
+            </Frame>
+            <Image x:Name="imguser" />-->
+
+            <Switch IsToggled="false" />
+            <Slider Minimum="0" Maximum="1"/>
+            <Stepper Minimum="0" Maximum="10" Increment="1" />
+
+            <CheckBox x:Name="checkBox" IsChecked="True" />
+            <Label Text="Lorem ipsum dolor sit amet, elit rutrum, enim hendrerit augue vitae praesent sed non, lorem aenean quis praesent pede.">
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                     Binding="{Binding Source={x:Reference checkBox}, Path=IsChecked}"
+                     Value="true">
+                        <Setter Property="FontAttributes"
+                    Value="Italic, Bold" />
+                        <Setter Property="FontSize"
+                    Value="Large" />
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

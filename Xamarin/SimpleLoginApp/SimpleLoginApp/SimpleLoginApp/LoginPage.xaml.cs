@@ -19,7 +19,7 @@ namespace SimpleLoginApp
             InitializeComponent();
         }
 
-        private void btnLogin_Clicked(object sender, EventArgs e)
+        private async void btnLogin_Clicked(object sender, EventArgs e)
         {
             if (txtUserName.Text == String.Empty||txtUserName.Text==null)
             {
@@ -35,7 +35,8 @@ namespace SimpleLoginApp
             string password = txtPassword.Text;
             if(userName=="faisal"&&password=="1234")
             {
-                CrossToastPopUp.Current.ShowToastSuccess("Login successfull");
+                await Navigation.PushAsync(new HomePage(userName));
+                //CrossToastPopUp.Current.ShowToastSuccess("Login successfull");
                 //DisplayAlert("Success", "Login successfull", "ok");
             }
             else

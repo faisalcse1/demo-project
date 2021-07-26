@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinControlApp.WebVIewPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Entry Placeholder="Weblink"
+                   x:Name="WebLink"/>
+            <Button x:Name="Add"
+                    Text="Add"
+                    BackgroundColor="SkyBlue"
+                    TextColor="White"
+                    CornerRadius="15"
+                    Clicked="Add_Clicked"/>
+            <ScrollView>
+                <WebView x:Name="BrowserLink" HeightRequest="1000"/>
+            </ScrollView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

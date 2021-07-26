@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinControlApp.MainPage">
+
+    <StackLayout Padding="10">
+        <Label Text="User Registration"
+               FontSize="Large"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+        <Entry x:Name="txtUserName"
+               FontSize="Large"               
+               Placeholder="Username"/>
+        <Entry x:Name="txtAge" 
+               FontSize="Large"
+               Placeholder="Age"
+               Keyboard="Numeric"/>
+        <Entry x:Name="txtMobileNo"
+               Placeholder="Mobile No"
+               FontSize="Large"
+               Keyboard="Telephone"/>
+        <Entry x:Name="txtEmail"
+               FontSize="Large"
+               Placeholder="Email"
+               Keyboard="Email"
+               IsEnabled="False"/>
+        <Entry x:Name="txtUrl"
+               FontSize="Large"
+               Placeholder="Url"
+               Keyboard="Url"
+               IsVisible="false"/>
+        <Entry x:Name="txtPassword"
+               FontSize="Large"
+               Placeholder="Password"
+               IsPassword="True"/>
+        <Button Text="Save"
+                BackgroundColor="SkyBlue"
+                TextColor="White"
+                CornerRadius="15"/>
+    </StackLayout>
+
+</ContentPage>

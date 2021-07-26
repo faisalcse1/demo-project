@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace SimpleLoginApp
+namespace WorkingWithImages
 {
     public partial class App : Application
     {
@@ -10,7 +10,7 @@ namespace SimpleLoginApp
         {
             InitializeComponent();
 
-            MainPage =new NavigationPage(new LoginPage());
+            MainPage = new EmbedderImage();
         }
 
         protected override void OnStart()
