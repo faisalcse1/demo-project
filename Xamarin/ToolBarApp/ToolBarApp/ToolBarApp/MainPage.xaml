@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToolBarApp.MainPage"   
+             xmlns:local="clr-namespace:ToolBarApp"
+             Title="Main Page">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     IconImageSource="add.png"
+                     x:Name="AddToolBarItem"
+                     Clicked="AddToolBarItem_Clicked"
+                     ></ToolbarItem>
+        <!--<ToolbarItem Text="Sub"></ToolbarItem>-->
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <!--<Label Text="ToolBar Item"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>-->
+        <Label FontSize="Large"
+               VerticalOptions="Center"
+               HorizontalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="ToolBar "
+                          TextColor="Blue"
+                          TextDecorations="Underline">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TapCommand}"
+                                                  CommandParameter="https://docs.microsoft.com/en-us/"/>
+                        </Span.GestureRecognizers>
+                    </Span>
+                    
+                    <Span Text="Item " />
+                    <local:HyperlinkSpan Text="Click" Url="https://docs.microsoft.com/en-us/"></local:HyperlinkSpan>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+       
+
+    </StackLayout>
+
+</ContentPage>

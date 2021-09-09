@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fRating="clr-namespace:Rating;assembly=Rating"
+             x:Class="RatingApp.MainPage">
+
+    <StackLayout>
+        <Label Text="Rating in Xamarin Forms"
+               HorizontalOptions="Center"
+               FontSize="Large"/>
+
+        <fRating:RatingBar x:Name="Rating"
+            SelectedStarValue="3"
+                           ImageHeight="30"
+                           ImageWidth="30"
+                           HorizontalOptions="Center"
+                           FlowDirection="LeftToRight"
+                           EmptyStarImage="emptystar"
+                           FillStarImage="fillstar"
+                           ></fRating:RatingBar>
+
+        <Button Text="Show"
+                x:Name="ShowButton"
+                Clicked="ShowButton_Clicked"></Button>
+    </StackLayout>
+
+</ContentPage>

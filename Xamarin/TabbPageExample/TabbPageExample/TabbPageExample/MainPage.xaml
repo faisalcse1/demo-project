@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TabbPageExample.MainPage"
+            xmlns:local="clr-namespace:TabbPageExample">
+
+    <local:Page1 Title="First Page" ></local:Page1>
+    <local:Page2 Title="Second Page"></local:Page2>
+
+    <!--<ContentPage Title="First Page">
+        <StackLayout>
+            <Label Text="First page"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="Large"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Second Page">
+        <StackLayout>
+            <Label Text="Second page"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="Large"/>
+        </StackLayout>
+    </ContentPage>-->
+
+</TabbedPage>

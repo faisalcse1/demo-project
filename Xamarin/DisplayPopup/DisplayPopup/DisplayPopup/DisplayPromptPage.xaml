@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DisplayPopup.DisplayPromptPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Display Prompt Page"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                   FontSize="Large"/>
+            <Button Text="Question 1"
+                    x:Name="ButtonQuestion"
+                    Clicked="ButtonQuestion_Clicked"></Button>
+            <Label FontSize="Large"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   x:Name="LabelResult"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
