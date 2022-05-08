@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebaseApp.Views.Student.StudentEntry">
+    <ContentPage.Content>
+        <StackLayout Padding="15" VerticalOptions="CenterAndExpand">
+            <Label Text="Student Entry"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                  FontSize="Large"/>
+
+            <Entry x:Name="TxtName"
+                   Placeholder="Enter your name"/>
+            <Entry x:Name="TxtEmail"
+                   Placeholder="Enter your email"
+                  />
+            <Button Text="Save"
+                    x:Name="ButtonSave"
+                    CornerRadius="15"
+                    Clicked="ButtonSave_Clicked"/>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

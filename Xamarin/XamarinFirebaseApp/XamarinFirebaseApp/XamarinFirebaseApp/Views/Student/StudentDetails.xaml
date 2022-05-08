@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebaseApp.Views.Student.StudentDetails">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Student Info"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                   FontSize="Large"/>   
+
+            <Label x:Name="LabelName"
+                   FontSize="Medium"/>
+            <Label x:Name="LabelEmail"
+                   FontSize="Medium"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
